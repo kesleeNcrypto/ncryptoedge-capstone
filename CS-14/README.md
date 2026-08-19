@@ -1,0 +1,5 @@
+# CS-14 — Project Slot
+
+**Status:** Planned
+
+Placeholder for the corresponding capstone project.
