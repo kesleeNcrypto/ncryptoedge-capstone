@@ -12,85 +12,34 @@ All phishing activity is restricted to authorized laboratory users and infrastru
 
 ---
 
-## 2. High-Level Architecture
+## 2. Validated Laboratory Architecture
 
 ```text
-                         NCRYPT0EDGE PHISHING AWARENESS LAB
-                                      │
-                                      ▼
-                         ┌─────────────────────────┐
-                         │      ATTACK SCENARIO    │
-                         │                         │
-                         │  Simulated Phishing     │
-                         │  MITRE ATT&CK: T1566   │
-                         └────────────┬────────────┘
-                                      │
-                                      ▼
-                         ┌─────────────────────────┐
-                         │        GoPhish          │
-                         │                         │
-                         │ • Users & Groups        │
-                         │ • Email Templates       │
-                         │ • Landing Pages         │
-                         │ • Campaigns             │
-                         │ • Tracking              │
-                         └────────────┬────────────┘
-                                      │
-                              Controlled Email
-                                      │
-                                      ▼
-                  ┌────────────────────────────────────┐
-                  │          AUTHORIZED TEST USER      │
-                  │                                    │
-                  │          Test Mailbox              │
-                  │                                    │
-                  │       No real credentials          │
-                  └────────────────┬───────────────────┘
-                                   │
-                         ┌─────────┴─────────┐
-                         │                   │
-                       Opens              Clicks
-                         │                   │
-                         └─────────┬─────────┘
-                                   ▼
-                         ┌─────────────────────────┐
-                         │    AWARENESS PAGE       │
-                         │                         │
-                         │ • Simulation notice     │
-                         │ • Phishing red flags    │
-                         │ • Correct response      │
-                         │ • Reporting procedure   │
-                         └────────────┬────────────┘
-                                      │
-                                      ▼
-                         ┌─────────────────────────┐
-                         │        METRICS          │
-                         │                         │
-                         │ • Delivery              │
-                         │ • Opens                 │
-                         │ • Clicks                │
-                         │ • Reports               │
-                         │ • Failure rate          │
-                         │ • Improvement            │
-                         └────────────┬────────────┘
-                                      │
-                                      ▼
-                         ┌─────────────────────────┐
-                         │      SOC ANALYSIS       │
-                         │                         │
-                         │ • T1566 mapping         │
-                         │ • IOC analysis           │
-                         │ • Reporting workflow    │
-                         │ • Defensive controls    │
-                         │ • Recommendations       │
-                         └────────────┬────────────┘
-                                      │
-                                      ▼
-                         ┌─────────────────────────┐
-                         │    AWARENESS PROGRAM    │
-                         │                         │
-                         │ Training                │
-                         │ Reporting Procedure     │
-                         │ Remediation             │
-                         └─────────────────────────┘
-...
+                         CS-03 PHISHING AWARENESS KIT
+
+                              ┌─────────────┐
+                              │   GoPhish   │
+                              │ Admin :3333 │
+                              │ Phish :80   │
+                              └──────┬──────┘
+                                     │
+                              SMTP :1025
+                                     │
+                                     ▼
+                              ┌─────────────┐
+                              │   Mailpit   │
+                              │  Web :8025  │
+                              └──────┬──────┘
+                                     │
+                                     ▼
+                              Synthetic User
+                                     │
+                                     ▼
+                               Tracking URL
+                                     │
+                                     ▼
+                         CS03 Training Landing Page
+                                     │
+                                     ▼
+                              GoPhish Event
+Eof

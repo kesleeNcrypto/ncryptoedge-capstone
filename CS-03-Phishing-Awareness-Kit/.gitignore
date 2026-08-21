@@ -1,0 +1,24 @@
+# GoPhish runtime/database
+gophish.db
+
+# Secrets and credentials
+.env
+*.env
+*.key
+*.pem
+*.crt
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+
+# Local captures
+captures/
+tmp/
+
+# OS files
+.DS_Store
+Thumbs.db
